@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "33bbd29f-5dce-49d0-8936-18f0d9d32fcc",
+		"name": "social network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/users/addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Zarar Tahir",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zarartahir97@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "babi3151",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "308-F, Street 10, Statelife Housing Society, Lahore",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "03344983151",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/users/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "dodi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "859070",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjcsImVtYWlsIjoiZG9kaUBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ijg1OTA3MCIsImlhdCI6MTYxODk5MzUyNiwiZXhwIjoxNjE4OTk3MTI2fQ.bADTGSdX9zVKbUEmMxD7v6bZmn6_NXaCeKyVwKsdZRI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "DODO",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "54511515DS1D51AS5S15SD1F5DS1F5S1F5SD1F5SD5SDDS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/followers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjYsImVtYWlsIjoiemFyYXJ0YWhpcjk3QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYmFiaTMxNTEiLCJpYXQiOjE2MTg5NTQ5MzMsImV4cCI6MTYxODk1ODUzM30.uftS-03VN8Jc4pay9mj_Mb-vHjQm3dblyAu7FTgIBIk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/followers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/followers/7",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjYsImVtYWlsIjoiemFyYXJ0YWhpcjk3QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYmFiaTMxNTEiLCJpYXQiOjE2MTg5NDM0MzMsImV4cCI6MTYxODk0NzAzM30.P8k2YtQ1WEh0q4m-uqrfhyigLUT7zOmldrAUnbecuR0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/followers/7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followers",
+						"7"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "7",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjYsImVtYWlsIjoiemFyYXJ0YWhpcjk3QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYmFiaTMxNTEiLCJpYXQiOjE2MTkwMDc3MzMsImV4cCI6MTYxOTAxMTMzM30.EzggMtdEI2wa6ujvWO1eFdq0TBLHsQKTTPhGB7bB8fI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/followers/6",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjcsImVtYWlsIjoiZG9kaUBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ijg1OTA3MCIsImlhdCI6MTYxOTAwODIyMSwiZXhwIjoxNjE5MDExODIxfQ.4YnyvoxYz8ZCXvqWsRH_ipwzZtS53hujrxZroKmdiO4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/followers/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
